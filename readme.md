@@ -1,20 +1,24 @@
-﻿# SQLDBTest
-C#でSQLDatabaseを操作してみるプロジェクト
+# はじめに
+C#で, EntityFramworkを使って、Posgres Databaseを操作してみる（工事中）
 
 # ビルド準備
 ## Postgresをインストール
 　see [The PostgreSQL Global Development Group](https://www.postgresql.org/)
  
-## Npgsqlをインストール
+## NugeパッケージャでEntityFramefork6.npgsqlをインストール
 1. プロジェクトファイルをVisualStudioで開く
-2. 「ツールメニュー」→「NuGetパッケージマネージャー」→「パッケージマネージャーコンソール」を開く
-3. コンソールにおいて、```Install-Package npgsql```を実行する
+2. 「ツールメニュー」→「NuGetパッケージマネージャー」→「ソリューションのNuGetパッケージの管理」を開く
+3. EntityFramefork6.npgsqlを検索しインストールする
 
-## EntityFrameforkをインストール
-1. プロジェクトファイルをVisualStudioで開く
-2. 「ツールメニュー」→「NuGetパッケージマネージャー」→「パッケージマネージャーコンソール」を開く
-3. コンソールにおいて、```Install-Package npgsql```を実行する
 
+## Npgsqlをアップデートする
+EntityFramefork6.npgsqlのインストールで本パッケージ(3.1.0)もインストールされるが、アップデートしないと、エラーが発生し利用できない。
+というわけで、6.2.5(2017/10/9時点で最新版）に更新。
+
+## EntityFrameforkをアップデートする
+EntityFramefork6.npgsqlのインストールで本パッケージ(6.1.0)もインストールされるが、最新版が出ていたので、6.1.3（2017/10/9時点で最新版）に更新。
+
+# 以下まだ未整理なメモ
 PostgresDB接続文字列：
 @"Server=localhost;Port=5432;User Id=test; Password=testtest;Database=testDb"
 
